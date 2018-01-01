@@ -3,7 +3,7 @@ flyaround
 
 A Symfony project created on December 18, 2017, 3:10 pm.
 
-Quête CRUD : 
+#Quête CRUD : 
 
 Critères de validation : 
 
@@ -22,3 +22,24 @@ L'accès aux tables (par Phpmyadmin ou l'onglet Database de PhpStorm) est foncti
 --> il y a une table "reservations" et non "reservation", c'est aussi voulu
 
 Merci pour votre correction !
+
+
+#Quête Relation entre les entités :
+
+Critères de validation :
+
+- Les entités correspondent exactement au nouveau schéma de BDD
+- Il n'y a pas d'erreur quand on lance un doctrine:schema:update
+- Les relations bidirectionnelles sont utilisées à bon escient et dans le bon sens
+- Les CRUD ont été mis à jour sauf pour l'entité Review
+- Les fichiers ne contiennent aucun warning relevé par PHPStorm
+- Toutes les routes (référencées en debug:router) sont fonctionnelles
+
+<------------------------------------------------------------------------------>
+
+--> La database s'appelle "flyaroun", c'est volontaire
+
+--> il y a une table "reservations" et non "reservation", c'est aussi voulu
+
+Merci pour votre correction, à dispo pour vous montrer le résultat sur mon ordi :)
+Bisous et Bonne année remplie de nombreux Cruds <3

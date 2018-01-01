@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd9f83bd-6615-431e-a2de-c8835b6c0cfc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Flight.php" afterPath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Flight.php" />
-      <change beforePath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/PlaneModel.php" afterPath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/PlaneModel.php" />
-      <change beforePath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Reservation.php" afterPath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Reservation.php" />
-      <change beforePath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Reservations.php" afterPath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Reservations.php" />
-      <change beforePath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Terrain.php" afterPath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Terrain.php" />
+      <change beforePath="$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Reservation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/WCS/CoavBundle/Repository/ReservationRepository.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,26 +31,6 @@
         <entry file="file://$PROJECT_DIR$/src/WCS/CoavBundle/Controller/TerrainController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-21">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WCS/CoavBundle/Entity/Reservation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReservationRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WCS/CoavBundle/Repository/ReservationRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -358,12 +333,12 @@
       <option name="presentableId" value="Default" />
       <updated>1513606435591</updated>
       <workItem from="1513606436815" duration="4486000" />
-      <workItem from="1514824471934" duration="5835000" />
+      <workItem from="1514824471934" duration="5976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10321000" />
+    <option name="totallyTimeSpent" value="10462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="24" width="944" height="848" extended-state="0" />

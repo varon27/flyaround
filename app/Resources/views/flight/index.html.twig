@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Flights list</h1>
+    <h1>Liste des vols</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Departure</th>
-                <th>Arrival</th>
-                <th>Nbfreeseats</th>
-                <th>Seatprice</th>
-                <th>Takeofftime</th>
-                <th>Publicationdate</th>
+                <th>Départ</th>
+                <th>Arrivée</th>
+                <th>Nombre de sièges disponibles</th>
+                <th>Tarif par siège</th>
+                <th>Heure de décollage</th>
+                <th>Date de publication</th>
                 <th>Description</th>
-                <th>Pilot</th>
-                <th>Plane</th>
-                <th>Wasdone</th>
+                <th>Pilote</th>
+                <th>Avion</th>
+                <th>Le vol a été effectué</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -37,10 +37,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('flight_show', { 'id': flight.id }) }}">show</a>
+                            <a href="{{ path('flight_show', { 'id': flight.id }) }}">Voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('flight_edit', { 'id': flight.id }) }}">edit</a>
+                            <a href="{{ path('flight_edit', { 'id': flight.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -51,7 +51,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('flight_new') }}">Create a new flight</a>
+            <a href="{{ path('flight_new') }}">Créer un nouveau vol</a>
         </li>
     </ul>
 {% endblock %}

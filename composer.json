@@ -1,10 +1,10 @@
 {
-    "name": "valerianearon/flyaround",
+    "name": "florian/flyaround",
     "license": "proprietary",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "":"src/"
+            "": "src/"
         },
         "classmap": [
             "app/AppKernel.php",

@@ -13,11 +13,6 @@ use Doctrine\ORM\Mapping as ORM;
 class Review
 {
     /**
-     * @ORM\OneToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="reviews")
-     */
-    private $reviewss;
-
-    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -34,18 +29,6 @@ class Review
     private $text;
 
     /**
-     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="usersRated")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $userRated;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="reviewAuthors")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $reviewAuthor;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="publicationDate", type="datetime")
@@ -59,11 +42,27 @@ class Review
      */
     private $note;
 
+    /**
+     * @var User $userRated
+     *
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User")
+     */
+    private $userRated;
+
+    /**
+     * @var User $reviewAuthor
+     *
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User")
+     */
+    private $reviewAuthor;
+
+	// Generated Code
+
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -92,54 +91,6 @@ class Review
     public function getText()
     {
         return $this->text;
-    }
-
-    /**
-     * Set userRated
-     *
-     * @param integer $userRated
-     *
-     * @return Review
-     */
-    public function setUserRated($userRated)
-    {
-        $this->userRated = $userRated;
-
-        return $this;
-    }
-
-    /**
-     * Get userRated
-     *
-     * @return int
-     */
-    public function getUserRated()
-    {
-        return $this->userRated;
-    }
-
-    /**
-     * Set reviewAuthor
-     *
-     * @param integer $reviewAuthor
-     *
-     * @return Review
-     */
-    public function setReviewAuthor($reviewAuthor)
-    {
-        $this->reviewAuthor = $reviewAuthor;
-
-        return $this;
-    }
-
-    /**
-     * Get reviewAuthor
-     *
-     * @return int
-     */
-    public function getReviewAuthor()
-    {
-        return $this->reviewAuthor;
     }
 
     /**
@@ -183,51 +134,58 @@ class Review
     /**
      * Get note
      *
-     * @return int
+     * @return integer
      */
     public function getNote()
     {
         return $this->note;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->reviewss = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
-     * Add reviewss
+     * Set userRated
      *
-     * @param \WCS\CoavBundle\Entity\User $reviewss
+     * @param \WCS\CoavBundle\Entity\User $userRated
      *
      * @return Review
      */
-    public function addReviewss(\WCS\CoavBundle\Entity\User $reviewss)
+    public function setUserRated(\WCS\CoavBundle\Entity\User $userRated = null)
     {
-        $this->reviewss[] = $reviewss;
+        $this->userRated = $userRated;
 
         return $this;
     }
 
     /**
-     * Remove reviewss
+     * Get userRated
      *
-     * @param \WCS\CoavBundle\Entity\User $reviewss
+     * @return \WCS\CoavBundle\Entity\User
      */
-    public function removeReviewss(\WCS\CoavBundle\Entity\User $reviewss)
+    public function getUserRated()
     {
-        $this->reviewss->removeElement($reviewss);
+        return $this->userRated;
     }
 
     /**
-     * Get reviewss
+     * Set reviewAuthor
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @param \WCS\CoavBundle\Entity\User $reviewAuthor
+     *
+     * @return Review
      */
-    public function getReviewss()
+    public function setReviewAuthor(\WCS\CoavBundle\Entity\User $reviewAuthor = null)
     {
-        return $this->reviewss;
+        $this->reviewAuthor = $reviewAuthor;
+
+        return $this;
+    }
+
+    /**
+     * Get reviewAuthor
+     *
+     * @return \WCS\CoavBundle\Entity\User
+     */
+    public function getReviewAuthor()
+    {
+        return $this->reviewAuthor;
     }
 }

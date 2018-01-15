@@ -5,7 +5,8 @@ namespace WCS\CoavBundle\Controller;
 use WCS\CoavBundle\Entity\PlaneModel;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Planemodel controller.
@@ -17,7 +18,7 @@ class PlaneModelController extends Controller
     /**
      * Lists all planeModel entities.
      *
-     * @Route("/", name="planemodel_index")
+     * @Route("/",    name="planemodel_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -26,15 +27,17 @@ class PlaneModelController extends Controller
 
         $planeModels = $em->getRepository('WCSCoavBundle:PlaneModel')->findAll();
 
-        return $this->render('planemodel/index.html.twig', array(
+        return $this->render(
+            'planemodel/index.html.twig', array(
             'planeModels' => $planeModels,
-        ));
+            )
+        );
     }
 
     /**
      * Creates a new planeModel entity.
      *
-     * @Route("/new", name="planemodel_new")
+     * @Route("/new",  name="planemodel_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -51,10 +54,12 @@ class PlaneModelController extends Controller
             return $this->redirectToRoute('planemodel_show', array('id' => $planeModel->getId()));
         }
 
-        return $this->render('planemodel/new.html.twig', array(
+        return $this->render(
+            'planemodel/new.html.twig', array(
             'planeModel' => $planeModel,
             'form' => $form->createView(),
-        ));
+            )
+        );
     }
 
     /**
@@ -67,17 +72,19 @@ class PlaneModelController extends Controller
     {
         $deleteForm = $this->createDeleteForm($planeModel);
 
-        return $this->render('planemodel/show.html.twig', array(
+        return $this->render(
+            'planemodel/show.html.twig', array(
             'planeModel' => $planeModel,
             'delete_form' => $deleteForm->createView(),
-        ));
+            )
+        );
     }
 
     /**
      * Displays a form to edit an existing planeModel entity.
      *
      * @Route("/{id}/edit", name="planemodel_edit")
-     * @Method({"GET", "POST"})
+     * @Method({"GET",      "POST"})
      */
     public function editAction(Request $request, PlaneModel $planeModel)
     {
@@ -91,17 +98,19 @@ class PlaneModelController extends Controller
             return $this->redirectToRoute('planemodel_edit', array('id' => $planeModel->getId()));
         }
 
-        return $this->render('planemodel/edit.html.twig', array(
+        return $this->render(
+            'planemodel/edit.html.twig', array(
             'planeModel' => $planeModel,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        ));
+            )
+        );
     }
 
     /**
      * Deletes a planeModel entity.
      *
-     * @Route("/{id}", name="planemodel_delete")
+     * @Route("/{id}",   name="planemodel_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, PlaneModel $planeModel)
@@ -130,7 +139,6 @@ class PlaneModelController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('planemodel_delete', array('id' => $planeModel->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

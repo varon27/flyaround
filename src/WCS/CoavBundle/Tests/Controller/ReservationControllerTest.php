@@ -4,7 +4,7 @@ namespace WCS\CoavBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class ReservationsControllerTest extends WebTestCase
+class ReservationControllerTest extends WebTestCase
 {
     /*
     public function testCompleteScenario()
@@ -13,13 +13,13 @@ class ReservationsControllerTest extends WebTestCase
         $client = static::createClient();
 
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/reservations/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /reservations/");
+        $crawler = $client->request('GET', '/reservation/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /reservation/");
         $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'wcs_coavbundle_reservations[field_name]'  => 'Test',
+            'wcs_coavbundle_reservation[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class ReservationsControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'wcs_coavbundle_reservations[field_name]'  => 'Foo',
+            'wcs_coavbundle_reservation[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

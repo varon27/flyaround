@@ -52,7 +52,8 @@ class FlightType extends AbstractType
                 'label' => 'Avion'
             ))
             ->add('wasDone',CheckboxType::class, array(
-                'label' => 'Le vol a été été opéré'
+                'label' => 'Le vol a été été opéré',
+                'required' => false
             ));
     }/**
       * {@inheritdoc}

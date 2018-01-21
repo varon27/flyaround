@@ -28,8 +28,8 @@
                 <td>{{ flight.arrival }}</td>
                 <td>{{ flight.nbFreeSeats }}</td>
                 <td>{{ flight.seatPrice }}</td>
-                <td>{% if flight.takeOffTime %}{{ flight.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if flight.takeOffTime %}{{ flight.takeOffTime|date('Y-m-d H:i') }}{% endif %}</td>
+                <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i') }}{% endif %}</td>
                 <td>{{ flight.description }}</td>
                 <td>{{ flight.pilot }}</td>
                 <td>{{ flight.plane }}</td>

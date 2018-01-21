@@ -21,6 +21,17 @@ class Flight
 	}
 
     /**
+     * Task constructor.
+     *
+     * Set takeOffTime and publicationDate at now
+     */
+    public function __construct()
+    {
+        $this->takeOffTime = new \DateTime('now');
+        $this->publicationDate = new \DateTime('now');
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -97,7 +108,7 @@ class Flight
     /**
      * @var bool
      *
-     * @ORM\Column(name="wasDone", type="boolean")
+     * @ORM\Column(name="wasDone", type="boolean", nullable=true)
      */
     private $wasDone;
 

@@ -1,0 +1,62 @@
+<?php
+
+namespace WCS\CoavBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Review
+ *
+ * @ORM\Table(name="review")
+ * @ORM\Entity(repositoryClass="WCS\CoavBundle\Repository\ReviewRepository")
+ */
+class Review
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text", type="text")
+     */
+    private $text;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="publicationDate", type="datetime")
+     */
+    private $publicationDate;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="note", type="smallint")
+     */
+    private $note;
+
+    /**
+     * @var User $userRated
+     *
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User")
+     */
+    private $userRated;
+
+    /**
+     * @var User $reviewAuthor
+     *
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User")
+     */
+    private $reviewAuthor;
+
+	// Generated Code
+
+
+}

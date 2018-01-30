@@ -1,7 +1,47 @@
 {% extends "base.html.twig" %}
 
-{% block title %}WCSCoavBundle:Review:index{% endblock %}
-
 {% block body %}
-<h1>Welcome to the Review:index page</h1>
+<h1>Retrouvez ici tous les avis</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Date de publication</th>
+            <th>Note</th>
+            <th>Utilisateur noté</th>
+            <th>Auteur de l'avis</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for review in reviews %}
+            <tr>
+                <td><a href="{{ path('review_show', { 'id': review.id }) }}">{{ review.id }}</a></td>
+                <td>{{ review.text }}</td>
+                <td>{% if review.publicationDate %}{{ review.publicationDate|date('Y-m-d H:i') }}{% endif %}</td>
+                <td>{{ review.note }}</td>
+                <td>{{ review.userRated }}</td>
+                <td>{{ review.reviewAuthor }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('review_show', { 'id': review.id }) }}">Voir</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('review_edit', { 'id': review.id }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('review_new') }}">Déposer un nouvel avis</a>
+        </li>
+    </ul>
 {% endblock %}

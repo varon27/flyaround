@@ -59,10 +59,11 @@ class Review
 	// Generated Code
 
 
+
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -70,7 +71,7 @@ class Review
     }
 
     /**
-     * Set text
+     * Set text.
      *
      * @param string $text
      *
@@ -84,7 +85,7 @@ class Review
     }
 
     /**
-     * Get text
+     * Get text.
      *
      * @return string
      */
@@ -94,7 +95,7 @@ class Review
     }
 
     /**
-     * Set publicationDate
+     * Set publicationDate.
      *
      * @param \DateTime $publicationDate
      *
@@ -108,7 +109,7 @@ class Review
     }
 
     /**
-     * Get publicationDate
+     * Get publicationDate.
      *
      * @return \DateTime
      */
@@ -118,9 +119,9 @@ class Review
     }
 
     /**
-     * Set note
+     * Set note.
      *
-     * @param integer $note
+     * @param int $note
      *
      * @return Review
      */
@@ -132,9 +133,9 @@ class Review
     }
 
     /**
-     * Get note
+     * Get note.
      *
-     * @return integer
+     * @return int
      */
     public function getNote()
     {
@@ -142,9 +143,9 @@ class Review
     }
 
     /**
-     * Set userRated
+     * Set userRated.
      *
-     * @param \WCS\CoavBundle\Entity\User $userRated
+     * @param \WCS\CoavBundle\Entity\User|null $userRated
      *
      * @return Review
      */
@@ -156,9 +157,9 @@ class Review
     }
 
     /**
-     * Get userRated
+     * Get userRated.
      *
-     * @return \WCS\CoavBundle\Entity\User
+     * @return \WCS\CoavBundle\Entity\User|null
      */
     public function getUserRated()
     {
@@ -166,9 +167,9 @@ class Review
     }
 
     /**
-     * Set reviewAuthor
+     * Set reviewAuthor.
      *
-     * @param \WCS\CoavBundle\Entity\User $reviewAuthor
+     * @param \WCS\CoavBundle\Entity\User|null $reviewAuthor
      *
      * @return Review
      */
@@ -180,9 +181,9 @@ class Review
     }
 
     /**
-     * Get reviewAuthor
+     * Get reviewAuthor.
      *
-     * @return \WCS\CoavBundle\Entity\User
+     * @return \WCS\CoavBundle\Entity\User|null
      */
     public function getReviewAuthor()
     {

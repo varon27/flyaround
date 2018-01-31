@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Planemodels list</h1>
+    <h1>Liste des modèles d'avion</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Model</th>
-                <th>Manufacturer</th>
-                <th>Cruisespeed</th>
-                <th>Planenbseats</th>
-                <th>Isavailable</th>
+                <th>Modèle</th>
+                <th>Constructeur</th>
+                <th>Vitesse de croisière</th>
+                <th>Nombre de sièges de l'avion</th>
+                <th>Est disponible ?</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -27,10 +27,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('planemodel_show', { 'id': planeModel.id }) }}">show</a>
+                            <a href="{{ path('planemodel_show', { 'id': planeModel.id }) }}">voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('planemodel_edit', { 'id': planeModel.id }) }}">edit</a>
+                            <a href="{{ path('planemodel_edit', { 'id': planeModel.id }) }}">modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -39,9 +39,7 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('planemodel_new') }}">Create a new planeModel</a>
-        </li>
-    </ul>
+    <div>
+        <a href="{{ path('planemodel_new') }}" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger btn-header">Ajouter un nouveau modèle d'avion</a>
+    </div>
 {% endblock %}

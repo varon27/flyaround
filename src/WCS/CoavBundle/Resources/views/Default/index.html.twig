@@ -1,18 +1,70 @@
-<h1>Routes disponibles :</h1>
-<ul>
-    <li>
-        <a href="{{ path('planemodel_index') }}">Voir les avions</a>
-    </li>
-    <li>
-        <a href="{{ path('reservation_index') }}">Voir les reservations</a>
-    </li>
-    <li>
-        <a href="{{ path('flight_index') }}">Voir les vols</a>
-    </li>
-    <li>
-        <a href="{{ path('terrain_index') }}">Voir les terrains</a>
-    </li>
-    <li>
-        <a href="{{ path('review_index') }}">Voir tous les avis utilisateurs</a>
-    </li>
-</ul>
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/flyaround.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading text-uppercase ">Bienvenue à bord de la compagnie Val'airline</div>
+                <div class="intro-lead-in ">Les issues de secours se trouvent en haut à gauche de la fenêtre.</div>
+            </div>
+        </div>
+    </header>
+
+        {#<h1>Bienvenue à bord de la compagnie Val'airline</h1>
+        <h4>Les issues de secours se trouvent en haut à gauche de la fenêtre.</h4>
+   #}
+
+    <div class="row">
+    <div class="col-md-6">
+        <div class="thumbnail">
+            <img src={{ asset('assets/img/plane.jpg') }} width="100%">
+        </div>
+        <div class="caption">
+            <h3>Avions </h3>
+            <a href="{{ path('planemodel_index') }}" class="btn btn-primary">Voir les avions</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="thumbnail">
+            <img src={{ asset('assets/img/reservation.jpg') }} width="100%">
+        </div>
+        <div class="caption">
+            <h3>Réservations effectuées</h3>
+            <a href="{{ path('reservation_index') }}" class="btn btn-primary">Voir les reservations</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src={{ asset('assets/img/plane_.jpg') }} width="100%">
+        </div>
+        <div class="caption">
+            <h3>PNC aux portes</h3>
+            <a href="{{ path('flight_index') }}" class="btn btn-primary">Voir les vols</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src={{ asset('assets/img/terrain.jpg') }} width="100%">
+        </div>
+        <div class="caption">
+            <h3>Armement des tobogans</h3>
+            <a href="{{ path('terrain_index') }}" class="btn btn-primary">Voir les terrains</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src={{ asset('assets/img/avis.jpg') }} width="100%">
+        </div>
+        <div class="caption">
+            <h3>Les avis</h3>
+            <a href="{{ path('review_index') }}" class="btn btn-primary">Voir tous les avis utilisateurs</a>
+        </div>
+    </div>
+
+
+{% endblock %}
